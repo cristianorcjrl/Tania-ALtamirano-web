@@ -15,7 +15,6 @@
             emailjs.init("xEA2aBlqVj198adgp");
         })();
     </script>
-    <script src="scripts.js" defer></script>
 </head>
 <body>
     <!-- Encabezado -->
@@ -24,9 +23,9 @@
             <div class="logo">
                 <img src="images/logo.png" alt="Tania Altamirano Solutions">
             </div>
-            <div class="menu-toggle">☰</div> <!-- Este es el botón del menú -->
+            <div class="menu-toggle" id="mobile-menu">&#9776;</div>
             <nav>
-                <ul>
+                <ul class="nav-list">
                     <li><a href="#about">Nosotros</a></li>
                     <li><a href="#services">Servicios</a></li>
                     <li><a href="#contact">Contacto</a></li>
@@ -92,5 +91,7 @@
             <p>&copy; 2024 Tania Altamirano Solutions. Todos los derechos reservados.</p>
         </div>
     </footer>
+
+    <script src="scripts.js"></script>
 </body>
 </html>

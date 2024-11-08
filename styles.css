@@ -41,7 +41,6 @@ nav ul {
     list-style: none;
     display: flex;
     gap: 20px;
-    justify-content: flex-end;
 }
 
 nav ul li a {
@@ -56,10 +55,14 @@ nav ul li a:hover {
 }
 
 .menu-toggle {
-    display: block;
+    display: none;
     font-size: 2rem;
     color: #fff;
     cursor: pointer;
+}
+
+#mobile-menu {
+    display: none;
 }
 
 /* Sección Hero */
@@ -179,22 +182,27 @@ footer {
 
 /* Media Queries */
 @media (max-width: 768px) {
-    nav {
-        display: none;
-    }
-
-    nav.nav-open {
+    .menu-toggle {
         display: block;
-        position: absolute;
-        top: 60px;
-        right: 0;
-        background: #002B5B;
-        padding: 20px;
-        width: 100%;
     }
 
     nav ul {
+        display: none;
         flex-direction: column;
-        gap: 10px;
+        background: #002B5B;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 20px 0;
+    }
+
+    nav.nav-open ul {
+        display: flex;
+    }
+
+    nav ul li {
+        text-align: center;
+        margin: 10px 0;
     }
 }
