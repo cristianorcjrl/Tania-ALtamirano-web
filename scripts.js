@@ -1,6 +1,7 @@
 // JavaScript para el menú de navegación móvil
 document.querySelector('.menu-toggle').addEventListener('click', function() {
-    document.querySelector('nav').classList.toggle('nav-open');
+    const nav = document.querySelector('nav');
+    nav.classList.toggle('nav-open');
 });
 
 // Manejar el envío del formulario de contacto con EmailJS y SweetAlert
