@@ -26,7 +26,6 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative;
 }
 
 .logo img {
@@ -34,14 +33,7 @@ header {
     height: auto;
 }
 
-.menu-toggle {
-    display: none;
-    font-size: 2rem;
-    color: #fff;
-    cursor: pointer;
-}
-
-nav {
+nav.nav-right {
     margin-left: auto;
 }
 
@@ -50,10 +42,6 @@ nav ul {
     display: flex;
     gap: 20px;
     justify-content: flex-end;
-}
-
-nav ul li {
-    margin: 0;
 }
 
 nav ul li a {
@@ -65,6 +53,13 @@ nav ul li a {
 
 nav ul li a:hover {
     color: #00bfa5;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
 }
 
 /* Sección Hero */
@@ -88,7 +83,7 @@ nav ul li a:hover {
 }
 
 .cta-button {
-    background: #25d366;
+    background: #00bfa5;
     color: #fff;
     padding: 15px 25px;
     text-decoration: none;
@@ -98,7 +93,7 @@ nav ul li a:hover {
 }
 
 .cta-button:hover {
-    background: #1da851;
+    background: #019f89;
 }
 
 /* Servicios */
@@ -188,23 +183,21 @@ footer {
         display: block;
     }
 
-    nav ul {
+    nav {
         display: none;
-        flex-direction: column;
-        background: #002B5B;
-        width: 100%;
+    }
+
+    nav.nav-open {
+        display: block;
         position: absolute;
         top: 60px;
-        left: 0;
-        padding: 20px 0;
+        right: 0;
+        background: #002B5B;
+        padding: 20px;
     }
 
-    nav.nav-open ul {
-        display: flex;
-    }
-
-    nav ul li {
-        text-align: center;
-        margin: 10px 0;
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
     }
 }
