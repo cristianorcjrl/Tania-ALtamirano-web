@@ -14,6 +14,7 @@ jobs:
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${ secrets.GITHUB_TOKEN }
+      with: 
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+
         publish_dir: . # Usa el directorio raíz o especifica el directorio que contiene tus archivos HTML/CSS/JS
