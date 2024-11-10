@@ -3,18 +3,19 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main
+      - main  # Escucha los cambios en la rama "main"
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
     steps:
-    - name: Checkout Repository
+    - name: Checkout 🛎️
       uses: actions/checkout@v2
 
-    - name: Deploy to GitHub Pages
+    - name: Deploy to GitHub Pages 🚀
       uses: peaceiris/actions-gh-pages@v3
-      with: 
+      with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-
-        publish_dir: . # Usa el directorio raíz o especifica el directorio que contiene tus archivos HTML/CSS/JS
+        publish_dir: ./  # Ajusta según el directorio donde estén tus archivos a publicar
+        destination_branch: gh-pages
